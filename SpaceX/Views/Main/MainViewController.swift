@@ -9,11 +9,11 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
+    @IBOutlet weak var mainTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
 
