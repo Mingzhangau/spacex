@@ -26,11 +26,9 @@ final class MainViewController: UIViewController {
     private func loadData() {
         resultFuture.onSuccess { [weak self] (launches) in
             DispatchQueue.main.async {
-                print(launches)
                 self?.dataSource.fill(data: launches)
             }
         }
-        
 
         let launchesFuture = SpaceXService.fetchLaunches()
         launchesFuture.on { [weak self] launches in
@@ -56,7 +54,6 @@ private class DataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
         self.tableView = tableView
         self.tableView?.dataSource = self
         self.tableView?.delegate = self
-        self.register(cell: UITableViewCell.self, on: tableView)
     }
     
     func register(cell: UITableViewCell.Type, on tableView: UITableView) {
@@ -69,14 +66,35 @@ private class DataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LaunchCell", for: indexPath)
-        cell.textLabel?.text = data[indexPath.row].missionName
-        cell.detailTextLabel?.text = data[indexPath.row].rocket.name
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "LaunchCell", for: indexPath) as? LaunchCell else {
+            fatalError()
+        }
         
+        cell.config(with: data[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         data.count
+    }
+}
+
+final class LaunchCell: UITableViewCell {
+    
+    @IBOutlet var mainLabel: UILabel! {
+        didSet {
+            mainLabel.font = UIFont.boldSystemFont(ofSize: 16)
+        }
+    }
+    
+    @IBOutlet var accessoryLabel: UILabel! {
+        didSet {
+            accessoryLabel.font = UIFont.preferredFont(forTextStyle: .callout)
+        }
+    }
+    
+    func config(with launch: LaunchDTO) {
+        mainLabel.text = launch.missionName
+        accessoryLabel.text = launch.rocket.name
     }
 }
