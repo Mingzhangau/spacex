@@ -64,6 +64,7 @@
 		F5FDE16C286C54B1001F2D05 /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FDE143286C54B1001F2D05 /* URLSessionDataTaskProtocol.swift */; };
 		F5FDE171286C5688001F2D05 /* LaunchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FDE16F286C5688001F2D05 /* LaunchDTO.swift */; };
 		F5FDE172286C5688001F2D05 /* RocketDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FDE170286C5688001F2D05 /* RocketDTO.swift */; };
+		F5FDE177286C5756001F2D05 /* SpaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FDE176286C5756001F2D05 /* SpaceService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +127,7 @@
 		F5FDE143286C54B1001F2D05 /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
 		F5FDE16F286C5688001F2D05 /* LaunchDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchDTO.swift; sourceTree = "<group>"; };
 		F5FDE170286C5688001F2D05 /* RocketDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketDTO.swift; sourceTree = "<group>"; };
+		F5FDE176286C5756001F2D05 /* SpaceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,7 +208,7 @@
 		F5FDE0A3286C52EA001F2D05 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				F5FDE174286C56B1001F2D05 /* New Group */,
+				F5FDE175286C571A001F2D05 /* DataLoading */,
 				F5FDE16E286C5665001F2D05 /* Model */,
 				F5FDE114286C54B1001F2D05 /* Networking */,
 			);
@@ -341,11 +343,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F5FDE174286C56B1001F2D05 /* New Group */ = {
+		F5FDE175286C571A001F2D05 /* DataLoading */ = {
 			isa = PBXGroup;
 			children = (
+				F5FDE176286C5756001F2D05 /* SpaceService.swift */,
 			);
-			path = "New Group";
+			path = DataLoading;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,6 +461,7 @@
 				F5FDE149286C54B1001F2D05 /* First_stage2.swift in Sources */,
 				F5FDE153286C54B1001F2D05 /* Rocket2.swift in Sources */,
 				F5FDE085286C5160001F2D05 /* AppDelegate.swift in Sources */,
+				F5FDE177286C5756001F2D05 /* SpaceService.swift in Sources */,
 				F5FDE10D286C53DB001F2D05 /* Reader.swift in Sources */,
 				F5FDE172286C5688001F2D05 /* RocketDTO.swift in Sources */,
 				F5FDE14B286C54B1001F2D05 /* Second_stage.swift in Sources */,
