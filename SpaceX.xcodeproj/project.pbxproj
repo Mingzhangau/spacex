@@ -56,8 +56,8 @@
 		F5FDE083286C5160001F2D05 /* SpaceX */ = {
 			isa = PBXGroup;
 			children = (
-				F5FDE084286C5160001F2D05 /* AppDelegate.swift */,
-				F5FDE086286C5160001F2D05 /* SceneDelegate.swift */,
+				F5FDE09C286C5191001F2D05 /* App */,
+				F5FDE09A286C5180001F2D05 /* Views */,
 				F5FDE088286C5160001F2D05 /* ViewController.swift */,
 				F5FDE08A286C5160001F2D05 /* Main.storyboard */,
 				F5FDE08D286C5162001F2D05 /* Assets.xcassets */,
@@ -65,6 +65,22 @@
 				F5FDE092286C5162001F2D05 /* Info.plist */,
 			);
 			path = SpaceX;
+			sourceTree = "<group>";
+		};
+		F5FDE09A286C5180001F2D05 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F5FDE09C286C5191001F2D05 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F5FDE084286C5160001F2D05 /* AppDelegate.swift */,
+				F5FDE086286C5160001F2D05 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +305,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q836L3T4H8;
 				INFOPLIST_FILE = SpaceX/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +313,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tattsonline.SpaceX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,6 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q836L3T4H8;
 				INFOPLIST_FILE = SpaceX/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +333,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tattsonline.SpaceX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
