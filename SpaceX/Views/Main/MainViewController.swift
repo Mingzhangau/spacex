@@ -18,7 +18,9 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource.register(tableView: mainTableView)
-        
+        dataSource.addSelectAction { [weak self] (rocketId) in
+            self?.performSegue(withIdentifier: "showDetails", sender: rocketId)
+        }
         loadData()
     }
     
@@ -37,6 +39,12 @@ final class MainViewController: UIViewController {
         } failure: { error in
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "showDetails" else { return }
+        let targetViewController = (segue.destination as? DetailsViewController)
+        targetViewController?.rocketID = (sender as! String)
+    }
 }
 
 private class DataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
@@ -45,8 +53,14 @@ private class DataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     private weak var tableView: UITableView?
     
+    private var action: ((String) -> Void)?
+    
     init(data: [LaunchDTO] = []) {
        self.data = data
+    }
+    
+    func addSelectAction(action: @escaping (String) -> Void) {
+        self.action = action
     }
     
     func register(tableView: UITableView) {
@@ -75,6 +89,11 @@ private class DataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         data.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let launch = data[indexPath.row]
+        action?(launch.rocket.id)
     }
 }
 

@@ -55,10 +55,15 @@ final class DetailsViewController: UIViewController {
     private func setupBinding() {
         future.onSuccess {  [weak self] rocket in
             guard let self = self else { return }
-            self.labelone.text = rocket.name
-            self.label2.text = "\(rocket.diameter)"
-            self.label3.text = "\(rocket.launchCost)"
-            self.wikiLink = rocket.wiki
+            DispatchQueue.main.async {
+                self.updateUI(rocket: rocket)
+            }
         }
+    }
+    private func updateUI(rocket: Rocket2DTO) {
+        self.labelone.text = rocket.name
+        self.label2.text = "\(rocket.diameter)"
+        self.label3.text = "\(rocket.launchCost)"
+        self.wikiLink = rocket.wiki
     }
 }
