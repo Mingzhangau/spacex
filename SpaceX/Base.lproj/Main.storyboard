@@ -67,22 +67,68 @@
                     </view>
                     <connections>
                         <outlet property="mainTableView" destination="6lD-MB-tVS" id="VPR-k4-EmZ"/>
+                        <segue destination="CJO-wm-Wdg" kind="show" identifier="showDetails" id="zcf-8C-OyX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="107" y="135"/>
         </scene>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="0YR-U9-Evh">
             <objects>
-                <viewController id="CJO-wm-Wdg" sceneMemberID="viewController">
+                <viewController id="CJO-wm-Wdg" customClass="DetailsViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mZJ-CD-9jM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RIe-kZ-mG1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0f-cz-noV">
+                                        <rect key="frame" x="186.5" y="0.0" width="41.5" height="202"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00G-VJ-c6D">
+                                        <rect key="frame" x="186.5" y="202" width="41.5" height="202"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30a-ad-9Lg">
+                                        <rect key="frame" x="186.5" y="404" width="41.5" height="202"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKm-J4-dU8">
+                                        <rect key="frame" x="173.5" y="606" width="67" height="202"/>
+                                        <state key="normal" title="Wikipedia"/>
+                                        <connections>
+                                            <action selector="didTapWikiButton:" destination="CJO-wm-Wdg" eventType="touchUpInside" id="9e5-MC-za8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="nEF-Be-Yyb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RIe-kZ-mG1" firstAttribute="top" secondItem="nEF-Be-Yyb" secondAttribute="top" id="81M-VM-Ofe"/>
+                            <constraint firstItem="nEF-Be-Yyb" firstAttribute="trailing" secondItem="RIe-kZ-mG1" secondAttribute="trailing" id="I68-Qv-sG2"/>
+                            <constraint firstItem="nEF-Be-Yyb" firstAttribute="bottom" secondItem="RIe-kZ-mG1" secondAttribute="bottom" id="ZEd-Cy-8k9"/>
+                            <constraint firstItem="RIe-kZ-mG1" firstAttribute="leading" secondItem="nEF-Be-Yyb" secondAttribute="leading" id="nux-8n-dSr"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7mS-Ug-GTW"/>
+                    <connections>
+                        <outlet property="label2" destination="00G-VJ-c6D" id="EgE-S3-iQy"/>
+                        <outlet property="label3" destination="30a-ad-9Lg" id="yzS-eP-A14"/>
+                        <outlet property="labelone" destination="u0f-cz-noV" id="6vT-uT-Yte"/>
+                        <outlet property="wikiButton" destination="HKm-J4-dU8" id="tG3-Wr-xly"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aaB-fj-Naz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

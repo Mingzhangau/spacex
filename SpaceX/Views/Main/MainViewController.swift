@@ -19,7 +19,6 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         dataSource.register(tableView: mainTableView)
         
-        
         loadData()
     }
     

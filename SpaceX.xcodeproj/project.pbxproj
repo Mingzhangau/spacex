@@ -65,6 +65,7 @@
 		F5FDE171286C5688001F2D05 /* LaunchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FDE16F286C5688001F2D05 /* LaunchDTO.swift */; };
 		F5FDE172286C5688001F2D05 /* RocketDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FDE170286C5688001F2D05 /* RocketDTO.swift */; };
 		F5FDE177286C5756001F2D05 /* SpaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FDE176286C5756001F2D05 /* SpaceService.swift */; };
+		F5FDE17A286C627C001F2D05 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FDE179286C627C001F2D05 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +129,7 @@
 		F5FDE16F286C5688001F2D05 /* LaunchDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchDTO.swift; sourceTree = "<group>"; };
 		F5FDE170286C5688001F2D05 /* RocketDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketDTO.swift; sourceTree = "<group>"; };
 		F5FDE176286C5756001F2D05 /* SpaceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceService.swift; sourceTree = "<group>"; };
+		F5FDE179286C627C001F2D05 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 		F5FDE0A0286C5286001F2D05 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				F5FDE179286C627C001F2D05 /* DetailsViewController.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				F5FDE15F286C54B1001F2D05 /* Mass.swift in Sources */,
 				F5FDE156286C54B1001F2D05 /* Rocket.swift in Sources */,
 				F5FDE161286C54B1001F2D05 /* Orbit_params.swift in Sources */,
+				F5FDE17A286C627C001F2D05 /* DetailsViewController.swift in Sources */,
 				F5FDE109286C53DB001F2D05 /* StringExtension+TypeName.swift in Sources */,
 				F5FDE16B286C54B1001F2D05 /* URLSessionProvider.swift in Sources */,
 				F5FDE146286C54B1001F2D05 /* Rest.swift in Sources */,
