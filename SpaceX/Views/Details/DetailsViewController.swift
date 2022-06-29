@@ -15,7 +15,7 @@ final class DetailsViewController: UIViewController {
     
     @IBOutlet weak var wikiButton: UIButton!
     
-    @IBOutlet weak var labelone: UILabel!
+    @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label3: UILabel!
     
@@ -60,8 +60,9 @@ final class DetailsViewController: UIViewController {
             }
         }
     }
+    
     private func updateUI(rocket: Rocket2DTO) {
-        self.labelone.text = rocket.name
+        self.label1.text = rocket.name
         self.label2.text = "\(rocket.diameter)"
         self.label3.text = "\(rocket.launchCost)"
         self.wikiLink = rocket.wiki

@@ -17,10 +17,13 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Space X"
+        
         dataSource.register(tableView: mainTableView)
         dataSource.addSelectAction { [weak self] (rocketId) in
             self?.performSegue(withIdentifier: "showDetails", sender: rocketId)
         }
+        
         loadData()
     }
     
@@ -34,7 +37,6 @@ final class MainViewController: UIViewController {
         let launchesFuture = SpaceXService.fetchLaunches()
         launchesFuture.on { [weak self] launches in
             let validLaunches = launches.compactMap(LaunchDTO.init)
-            
             self?.resultFuture.resolve(with: validLaunches)
         } failure: { error in
         }
